@@ -25,3 +25,11 @@
 /java/test/nbproject/*
 
 /csharp/*
+
+.classpath
+.settings
+.project
+/bin
+
+.gradle
+build

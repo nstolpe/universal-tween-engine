@@ -117,3 +117,36 @@ http://www.aurelienribon.com/forum/viewforum.php?f=5
 
 Also, the following link will guide you to a discussion thread that started it all:  
 http://www.badlogicgames.com/forum/viewtopic.php?f=17&t=494
+
+## Usage
+
+You can use Jitpack.io to include this project into your Maven/Gradle project
+
+### Gradle
+
+```gradle
+repositories {
+  maven { url "https://jitpack.io" }
+}
+
+dependencies {
+  compile 'com.github.arcnor:universal-tween-engine:6.3.3'
+}
+```
+
+### Maven
+
+```xml
+<repository>
+    <id>jitpack.io</id>
+    <url>https://jitpack.io</url>
+</repository>
+
+<dependencies>
+    <dependency>
+        <groupId>com.github.arcnor</groupId>
+        <artifactId>universal-tween-engine</artifactId>
+        <version>6.3.3</version>
+    </dependency>
+</dependencies>
+```

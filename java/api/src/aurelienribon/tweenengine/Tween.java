@@ -337,7 +337,7 @@ public class Tween extends BaseTween<Tween> {
 	// -------------------------------------------------------------------------
 
 	// Main
-	private Object target;
+	protected Object target;
 	private Class<?> targetClass;
 	protected TweenAccessor<Object> accessor;
 	private int type;

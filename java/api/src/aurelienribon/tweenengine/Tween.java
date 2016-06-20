@@ -363,7 +363,7 @@ public final class Tween extends BaseTween<Tween> {
 	// Setup
 	// -------------------------------------------------------------------------
 
-	private Tween() {
+	public Tween() {
 		reset();
 	}
 

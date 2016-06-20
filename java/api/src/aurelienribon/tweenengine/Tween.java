@@ -390,7 +390,7 @@ public class Tween extends BaseTween<Tween> {
 		}
 	}
 
-	private void setup(Object target, int tweenType, float duration) {
+	protected void setup(Object target, int tweenType, float duration) {
 		if (duration < 0) throw new RuntimeException("Duration can't be negative");
 
 		this.target = target;

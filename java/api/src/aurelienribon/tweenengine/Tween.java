@@ -338,26 +338,26 @@ public class Tween extends BaseTween<Tween> {
 
 	// Main
 	protected Object target;
-	private Class<?> targetClass;
+	protected Class<?> targetClass;
 	protected TweenAccessor<Object> accessor;
 	protected int type;
-	private TweenEquation equation;
-	private TweenPath path;
+	protected TweenEquation equation;
+	protected TweenPath path;
 
 	// General
-	private boolean isFrom;
-	private boolean isRelative;
-	private int combinedAttrsCnt;
-	private int waypointsCnt;
+	protected boolean isFrom;
+	protected boolean isRelative;
+	protected int combinedAttrsCnt;
+	protected int waypointsCnt;
 
 	// Values
 	protected final float[] startValues = new float[combinedAttrsLimit];
-	private final float[] targetValues = new float[combinedAttrsLimit];
-	private final float[] waypoints = new float[waypointsLimit * combinedAttrsLimit];
+	protected final float[] targetValues = new float[combinedAttrsLimit];
+	protected final float[] waypoints = new float[waypointsLimit * combinedAttrsLimit];
 
 	// Buffers
-	private float[] accessorBuffer = new float[combinedAttrsLimit];
-	private float[] pathBuffer = new float[(2+waypointsLimit)*combinedAttrsLimit];
+	protected float[] accessorBuffer = new float[combinedAttrsLimit];
+	protected float[] pathBuffer = new float[(2+waypointsLimit)*combinedAttrsLimit];
 
 	// -------------------------------------------------------------------------
 	// Setup

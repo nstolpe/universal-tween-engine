@@ -339,7 +339,7 @@ public class Tween extends BaseTween<Tween> {
 	// Main
 	private Object target;
 	private Class<?> targetClass;
-	private TweenAccessor<Object> accessor;
+	protected TweenAccessor<Object> accessor;
 	private int type;
 	private TweenEquation equation;
 	private TweenPath path;

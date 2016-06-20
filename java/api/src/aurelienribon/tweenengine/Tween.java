@@ -76,7 +76,7 @@ import java.util.Map;
  * @see Timeline
  * @author Aurelien Ribon | http://www.aurelienribon.com/
  */
-public final class Tween extends BaseTween<Tween> {
+public class Tween extends BaseTween<Tween> {
 	// -------------------------------------------------------------------------
 	// Static -- misc
 	// -------------------------------------------------------------------------

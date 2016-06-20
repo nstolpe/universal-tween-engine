@@ -364,6 +364,7 @@ public class Tween extends BaseTween<Tween> {
 	// -------------------------------------------------------------------------
 
 	public Tween() {
+		int f = 1;
 		reset();
 	}
 

@@ -87,8 +87,8 @@ public class Tween extends BaseTween<Tween> {
 	 */
 	public static final int INFINITY = -1;
 
-	private static int combinedAttrsLimit = 3;
-	private static int waypointsLimit = 0;
+	protected static int combinedAttrsLimit = 3;
+	protected static int waypointsLimit = 0;
 
 	/**
 	 * Changes the limit for combined attributes. Defaults to 3 to reduce
@@ -117,12 +117,12 @@ public class Tween extends BaseTween<Tween> {
 	// Static -- pool
 	// -------------------------------------------------------------------------
 
-	private static final Pool.Callback<Tween> poolCallback = new Pool.Callback<Tween>() {
+	protected static final Pool.Callback<Tween> poolCallback = new Pool.Callback<Tween>() {
 		@Override public void onPool(Tween obj) {obj.reset();}
 		@Override public void onUnPool(Tween obj) {obj.reset();}
 	};
 
-	private static final Pool<Tween> pool = new Pool<Tween>(20, poolCallback) {
+	protected static final Pool<Tween> pool = new Pool<Tween>(20, poolCallback) {
 		@Override protected Tween create() {return new Tween();}
 	};
 
@@ -145,7 +145,7 @@ public class Tween extends BaseTween<Tween> {
 	// Static -- tween accessors
 	// -------------------------------------------------------------------------
 
-	private static final Map<Class<?>, TweenAccessor<?>> registeredAccessors = new HashMap<Class<?>, TweenAccessor<?>>();
+	protected static final Map<Class<?>, TweenAccessor<?>> registeredAccessors = new HashMap<Class<?>, TweenAccessor<?>>();
 
 	/**
 	 * Registers an accessor with the class of an object. This accessor will be
@@ -399,7 +399,7 @@ public class Tween extends BaseTween<Tween> {
 		this.duration = duration;
 	}
 
-	private Class<?> findTargetClass() {
+	protected Class<?> findTargetClass() {
 		if (registeredAccessors.containsKey(target.getClass())) return target.getClass();
 		if (target instanceof TweenAccessor) return target.getClass();
 
@@ -905,7 +905,7 @@ public class Tween extends BaseTween<Tween> {
 	// Helpers
 	// -------------------------------------------------------------------------
 
-	private void throwCombinedAttrsLimitReached() {
+	protected void throwCombinedAttrsLimitReached() {
 		String msg = "You cannot combine more than " + combinedAttrsLimit + " "
 			+ "attributes in a tween. You can raise this limit with "
 			+ "Tween.setCombinedAttributesLimit(), which should be called once "
@@ -913,7 +913,7 @@ public class Tween extends BaseTween<Tween> {
 		throw new RuntimeException(msg);
 	}
 
-	private void throwWaypointsLimitReached() {
+	protected void throwWaypointsLimitReached() {
 		String msg = "You cannot add more than " + waypointsLimit + " "
 			+ "waypoints to a tween. You can raise this limit with "
 			+ "Tween.setWaypointsLimit(), which should be called once in "

@@ -351,7 +351,7 @@ public class Tween extends BaseTween<Tween> {
 	private int waypointsCnt;
 
 	// Values
-	private final float[] startValues = new float[combinedAttrsLimit];
+	protected final float[] startValues = new float[combinedAttrsLimit];
 	private final float[] targetValues = new float[combinedAttrsLimit];
 	private final float[] waypoints = new float[waypointsLimit * combinedAttrsLimit];
 

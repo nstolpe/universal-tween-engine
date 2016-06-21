@@ -10,7 +10,7 @@ abstract class Pool<T> {
 	private final ArrayList<T> objects;
 	private final Callback<T> callback;
 
-	protected abstract T create();
+	public abstract T create();
 
 	public Pool(int initCapacity, Callback<T> callback) {
 		this.objects = new ArrayList<T>(initCapacity);

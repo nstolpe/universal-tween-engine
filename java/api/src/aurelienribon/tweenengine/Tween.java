@@ -122,7 +122,7 @@ public class Tween extends BaseTween<Tween> {
 		@Override public void onUnPool(Tween obj) {obj.reset();}
 	};
 
-	protected static final Pool<Tween> pool = new Pool<Tween>(20, poolCallback) {
+	public static final Pool<Tween> pool = new Pool<Tween>(20, poolCallback) {
 		@Override protected Tween create() {return new Tween();}
 	};
 

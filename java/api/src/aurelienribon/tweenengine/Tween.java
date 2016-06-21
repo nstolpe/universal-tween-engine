@@ -58,7 +58,7 @@ import java.util.Map;
  *
  * You need to periodicaly update the tween engine, in order to compute the new
  * values. If your tweens are managed, only update the manager; else you need
- * to call {@link #update()} on your tweens periodically.
+ * to call update() on your tweens periodically.
  * <p/>
  *
  * <h2>Example - setting up the engine</h2>
@@ -68,7 +68,7 @@ import java.util.Map;
  * attributes of your objects: <b>you need to implement the {@link
  * TweenAccessor} interface for each object class you will animate</b>. Once
  * done, don't forget to register these implementations, using the static method
- * {@link registerAccessor()}, when you start your application.
+ * registerAccessor(), when you start your application.
  *
  * @see TweenAccessor
  * @see TweenManager
@@ -123,7 +123,8 @@ public class Tween extends BaseTween<Tween> {
 	};
 
 	public static final Pool<Tween> pool = new Pool<Tween>(20, poolCallback) {
-		@Override protected Tween create() {return new Tween();}
+		@Override
+		public Tween create() {return new Tween();}
 	};
 
 	/**
@@ -745,7 +746,7 @@ public class Tween extends BaseTween<Tween> {
 	/**
 	 * Gets the target values. The returned buffer is as long as the maximum
 	 * allowed combined values. Therefore, you're surely not interested in all
-	 * its content. Use {@link #getCombinedTweenCount()} to get the number of
+	 * its content. Use getCombinedTweenCount() to get the number of
 	 * interesting slots.
 	 */
 	public float[] getTargetValues() {

@@ -87,7 +87,7 @@ public class Tween extends BaseTween<Tween> {
 	 */
 	public static final int INFINITY = -1;
 
-	protected static int combinedAttrsLimit = 3;
+	protected static int combinedAttrsLimit = 4;
 	protected static int waypointsLimit = 0;
 
 	/**

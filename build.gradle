@@ -20,8 +20,7 @@ task wrapper(type: Wrapper) {
 
 task sourcesJar(type: Jar, dependsOn: classes) {
 	classifier = 'sources'
-	//from sourceSets.main.allSource
-	from sourceSets.main.java.srcDirs
+	from sourceSets.main.allSource
 }
 
 task javadocJar(type: Jar, dependsOn: javadoc) {
@@ -31,5 +30,5 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
 
 artifacts {
 	archives sourcesJar
-	archives javadocJar
+	//archives javadocJar
 }

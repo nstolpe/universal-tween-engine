@@ -18,9 +18,10 @@ task wrapper(type: Wrapper) {
     gradleVersion = '2.8'
 }
 
-/*task sourcesJar(type: Jar, dependsOn: classes) {
+task sourcesJar(type: Jar, dependsOn: classes) {
 	classifier = 'sources'
-	from sourceSets.main.allSource
+	//from sourceSets.main.allSource
+	from sourceSets.main.java.srcDirs
 }
 
 task javadocJar(type: Jar, dependsOn: javadoc) {
@@ -31,4 +32,4 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
 artifacts {
 	archives sourcesJar
 	archives javadocJar
-}*/
+}
